@@ -1,4 +1,6 @@
 .card {
+    display: flex;
+    flex-wrap: wrap;
     border-radius: 5px !important;
     background: #e0e5ec !important;
     box-shadow:  20px 20px 40px #c7ccd2  

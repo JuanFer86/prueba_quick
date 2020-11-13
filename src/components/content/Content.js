@@ -1,9 +1,7 @@
-import React, { useContext/* , useEffect, useReducer  */} from "react";
+import React, { useContext } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { pokemonContext } from "../../context/Context";
 import { pokemon_entries } from "../../helpers/pokemonStorage";
-// import { reducer } from "../../helpers/reducer";
-// import { useFetch } from "../../helpers/useFetch";
 import { Element } from './Element';
 
 export const Content = () => {  
