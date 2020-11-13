@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import { Principal } from '../../views/principal/Principal'
 import { NavbarComponent } from '../../components/navbar/NavbarComponent'
 
