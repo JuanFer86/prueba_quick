@@ -35,11 +35,14 @@ export const reducer = (state = [], action) =>{
             if( action.payload.flag < 1 && action.payload.filters.length !== 0 ){
                 state = [ ]
             }
-                        
+
             if (action.payload.filters.length !== 0) {
+                state = [ ...state, ...action.payload.filters ]
+                
+                const filters = state.filter( (v,i,a) => a.findIndex(t=>(t.name === v.name)) ===i );
+
                 return[           
-                    ...state,     
-                    ...action.payload.filters
+                    ...filters                    
                 ]
             }else {
                 return [ ...state ]
