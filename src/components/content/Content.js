@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { pokemonContext } from "../../context/Context";
-import { pokemon_entries} from "../../helpers/pokemon_storage";
+import { pokemon_entries } from "../../helpers/pokemon_storage";
 import { Element } from './Element';
 
 export const Content = () => {  
@@ -13,8 +13,10 @@ export const Content = () => {
 
     let pokemons = []
 
+    console.log( pokemon_entries   );
+
     for (let index = state.length; index < state.length + 20; index++){
-      pokemons = [ ...pokemons, state[index].pokemon_species ]
+      pokemons = [ ...pokemons, pokemon_entries[index].pokemon_species ]
     }
 
     dispatch({
