@@ -1,0 +1,56 @@
+/* .navbar-pointer:hover{
+    cursor: pointer;
+  } */
+
+.navbar-pointer input{
+    background-color: #e0e5ec;
+    border: 0;
+    border-radius: 15px;
+    width: 0;
+    transition: width 2s;
+}
+
+.navbar-pointer:hover ~ input{
+    background-color: #fff;
+    border: 0;
+    width: 10rem;
+    border: 1px solid #bdbdbd;
+    border-radius: 15px;
+    padding-left: 1rem;
+    outline: none;
+    transition: width 2s;
+    width: 15rem;
+}
+
+/* .navbar-pointer img:focus ~ input{
+    animation-duration: 2s;
+    animation-name: extend;
+    border: 1px solid gray;
+    border-radius: 10%;
+    width: 5rem;
+} */
+
+.navbar-pointer input:hover{
+    background-color: #fff;
+    border: 0;
+    width: 10rem;
+    border: 1px solid #bdbdbd;
+    border-radius: 15px;
+    padding-left: 1rem;
+    outline: none;
+    transition: width 2s;
+    width: 15rem;
+}
+
+.navbar-pointer input:focus{
+    background-color: #fff;
+    border: 0;
+    width: 10rem;
+    border: 1px solid #bdbdbd;
+    border-radius: 15px;
+    box-shadow: 0 0 0 2pt #4fc3f7;
+    padding-left: 1rem;
+    outline: none;
+    transition: width 2s;
+    width: 15rem;
+}

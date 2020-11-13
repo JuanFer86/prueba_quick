@@ -1,0 +1,13 @@
+.card {
+    border-radius: 5px !important;
+    background: #e0e5ec !important;
+    box-shadow:  20px 20px 40px #c7ccd2  
+                -20px -20px 40px #f9feff !important; 
+}
+
+.card-footer {
+    border-radius: 5px;
+    background: #c3cdda;
+    box-shadow:  20px 20px 40px #aeb6c2, 
+                -20px -20px 40px #d8e4f2;
+}
