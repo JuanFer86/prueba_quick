@@ -1,7 +1,7 @@
 .card-filters {
+    display: flex;
+    flex-wrap: wrap;
     padding: 1rem;
-    /* align-items: center;
-    justify-content: center; */
     border-radius: 5px;
     background: #e0e5ec;
     box-shadow:  20px 20px 40px #c7ccd2, 

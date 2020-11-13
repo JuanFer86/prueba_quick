@@ -1,10 +1,22 @@
+import { useState } from "react";
 import { initialPokemons } from "./initialPokemons";
 
 
 export const reducer = (state = [], action) =>{
+
+
     switch (action.type) {
+        case "start":
+            const { pokemon_entries } =  JSON.parse(localStorage.getItem('pokemons')) || [ { pokemons_species: [] } ]
+            
+            const initial = initialPokemons(pokemon_entries)
+
+            return [
+                ...initial
+            ]
+
         case "load":
-            console.log(action.payload)
+            
             return [
                 ...state,
                 ...action.payload.pokemons

@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import "./App.css";
 import { AppRouter } from "./components/router/AppRouter";
 import { pokemonContext } from "./context/Context";
@@ -24,9 +24,15 @@ function App() {
 
   // para guardar en el localstorage
   useEffect(() => {
-    if (data !== null) {
+    if ( data !== null ) {
       localStorage.setItem("pokemons", JSON.stringify(data));
     }
+
+    dispatch({
+      type: "start",
+      payload: {}
+    })
+
   }, [data]);
 
   return (

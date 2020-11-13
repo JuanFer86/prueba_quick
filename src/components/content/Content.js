@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Row, Col, Button } from "react-bootstrap";
 import { pokemonContext } from "../../context/Context";
-import { pokemon_entries } from "../../helpers/pokemonStorage";
+import { pokemon_entries} from "../../helpers/pokemon_storage";
 import { Element } from './Element';
 
 export const Content = () => {  
@@ -10,9 +10,11 @@ export const Content = () => {
   const { state, dispatch } = useContext(pokemonContext);
   
   const handleClick = async () => {
+
     let pokemons = []
+
     for (let index = state.length; index < state.length + 20; index++){
-      pokemons = [ ...pokemons, pokemon_entries[index].pokemon_species ]
+      pokemons = [ ...pokemons, state[index].pokemon_species ]
     }
 
     dispatch({
@@ -28,13 +30,13 @@ export const Content = () => {
     <Row>
       {/* {
         loading && <h3>Cargando...</h3>
-      } */}
-        {
+      } */}      
+        {          
           state.length !== 0 ? state.map( (pokemon, i) => (                      
               <Col key={`el-${i}`} xs={6} md={4} className="mt-3" >
                 <Element data={ pokemon }/>
               </Col>            
-          )): <p>No se encuetran pokemons</p>
+          )): <p className="m-4" >No se encuetran pokemons</p>
         }   
     </Row>
     <Row>
